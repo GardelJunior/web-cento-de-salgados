@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+/* COLORS */
+:root {
+  --primary-color: #FF0000;
+}
+
+/* CSS RESET */
+* {
+  font-family: "Roboto", sans-serif;
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0;
+}
