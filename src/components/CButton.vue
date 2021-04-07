@@ -13,16 +13,16 @@ export default {
 </script>
 <style scoped>
 .my-button {
-  width: 94%;
-  font-size: 1rem;
   display: flex;
+  width: 90%;
   height: 48px;
   justify-content: center;
   align-items: center;
-  color: white;
+  font-size: 1rem;
   font-weight: bold;
   border-radius: 6px;
   letter-spacing: 0.08rem;
+  color: white;
   background-color: var(--primary-color);
 }
 .my-button:disabled {
