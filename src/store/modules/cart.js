@@ -10,9 +10,9 @@ const getters = {
   isCoxinhaSelected: state => state.selection.includes(SNACKS[0].id),
   isSelectionValid: state => [1, 2, 4].includes(state.selection.length),
   cartTotalValue: (_, { isCoxinhaSelected }) => {
-    const discount = isCoxinhaSelected ? 0.1 : 0;
+    const discount = isCoxinhaSelected ? 0.1 : 0.0;
     const subtotal = SNACKS_BOX_PRICE;
-    const valueWithDiscount = subtotal * (1.0 - discount);
+    const valueWithDiscount = subtotal * discount;
     const total = subtotal - valueWithDiscount;
 
     return {
@@ -21,7 +21,7 @@ const getters = {
       total
     }
   },
-  cartSnacksDescription: state => {
+  cartSnacksWithQuantities: state => {
     const quantityPerSnackType = SNACKS_BOX_MAX_QTY / state.selection.length;
     return state.selection.map((id) => {
       const { name } = SNACKS.find(item => item.id === id);
