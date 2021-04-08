@@ -89,7 +89,7 @@ export default {
   align-items: center;
   margin-top: 0.3rem;
   width: 100%;
-  height: 6rem;
+  height: 6.1rem;
   background: linear-gradient(to left, #cbcbcb, #aeaeae);
 }
 
