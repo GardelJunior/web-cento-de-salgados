@@ -1,7 +1,7 @@
 <template>
   <div id="selection-container">
     <header id="selection-header">
-      <div v-if="isCoxinhaSelected" class="coxinha-discount-banner">
+      <div :class="{ open: isCoxinhaSelected }" class="coxinha-discount-banner">
         <img src="../assets/images/coxinha.png" alt="coxinhas" />
         <p>
           ESCOLHEU <b>COXINHA</b> GANHOU DESCONTO DE <b>10%</b> NO SEU CENTO DE
@@ -89,8 +89,14 @@ export default {
   align-items: center;
   margin-top: 0.3rem;
   width: 100%;
-  height: 6.1rem;
+  max-height: 0;
+  overflow: hidden;
   background: linear-gradient(to left, #cbcbcb, #aeaeae);
+  transition: max-height ease-in 150ms;
+}
+
+#selection-header .coxinha-discount-banner.open {
+  max-height: 6.1rem;
 }
 
 #selection-header .coxinha-discount-banner img {

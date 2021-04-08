@@ -24,6 +24,7 @@ export default {
   letter-spacing: 0.08rem;
   color: white;
   background-color: var(--primary-color);
+  transition: background-color ease-in 120ms;
 }
 .my-button:disabled {
   background-color: #ccc;
