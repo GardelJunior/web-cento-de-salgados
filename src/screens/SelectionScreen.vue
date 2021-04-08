@@ -102,6 +102,8 @@ export default {
 
 #selection-header .coxinha-discount-banner p {
   max-width: 14rem;
+  line-height: 1.4rem;
+  color: #333;
 }
 
 #selection-container {
@@ -124,7 +126,7 @@ ul {
 }
 
 ul li {
-  padding: 24px 18px;
+  padding: 1.5rem 1rem;
   border-bottom: solid 1px #ddd;
   color: #707070;
   display: flex;
