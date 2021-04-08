@@ -47,6 +47,7 @@ export default {
   },
   computed: {
     ...mapGetters([
+      "isSelectionValid",
       "isCoxinhaSelected",
       "cartTotalValue",
       "cartSnacksWithQuantities",
@@ -56,6 +57,11 @@ export default {
     navigateBack() {
       this.$router.go(-1);
     },
+  },
+  mounted() {
+    if (!this.isSelectionValid) {
+      this.navigateBack();
+    }
   },
 };
 </script>
